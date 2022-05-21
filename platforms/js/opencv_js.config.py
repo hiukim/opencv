@@ -197,7 +197,20 @@ calib3d = {
     ],
 }
 
-white_list = makeWhiteList([core, imgproc, objdetect, video, dnn, features2d, photo, aruco, calib3d])
+core2 = {
+    '': [
+        'SVDecomp',
+    ]
+}
+calib3d2 = {
+    '': [
+        'Rodrigues',
+        'solvePnP',
+    ]
+}
+
+#white_list = makeWhiteList([core, imgproc, objdetect, video, dnn, features2d, photo, aruco, calib3d])
+white_list = makeWhiteList([core2, calib3d2])
 
 # namespace_prefix_override['dnn'] = ''  # compatibility stuff (enabled by default)
 # namespace_prefix_override['aruco'] = ''  # compatibility stuff (enabled by default)
